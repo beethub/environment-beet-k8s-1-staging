@@ -13,7 +13,7 @@ expose:
   - --v
   - 4
   config:
-    domain: 174.138.108.97.nip.io
+    domain: apps.beethub.com.mx
     exposer: Ingress
     http: "true"
     tlsacme: "false"
