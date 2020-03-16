@@ -16,7 +16,7 @@ expose:
     domain: trn.beethub.com.mx
     exposer: Ingress
     http: "false"
-    tlsSecretName: tls-trn-beethub-com-mx-s
+    tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
