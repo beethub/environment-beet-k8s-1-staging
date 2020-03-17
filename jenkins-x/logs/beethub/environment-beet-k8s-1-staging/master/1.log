@@ -1,26 +1,26 @@
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-sb2v6[0m
-{"level":"warn","ts":1584125536.452273,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1584125536.4532304,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-49zhs[0m
+{"level":"warn","ts":1584450020.3512309,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584450020.352947,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ssj7l[0m
-{"level":"warn","ts":1584125537.6285496,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1584125537.6315203,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mfsc8[0m
+{"level":"warn","ts":1584450021.227342,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584450021.233995,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-59l8q-7gdfc[0m
-{"level":"warn","ts":1584125543.839634,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1584125544.1442657,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-787g2-jzq72[0m
+{"level":"warn","ts":1584450040.330407,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584450040.5992382,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ v0.0.5 in path /workspace/source"}
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:ce6a659fcb4e411b27410c05cd8b75a0e2d345bd
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:fc468f1785d2cad46eaf1b07ea3845991a17d0d0
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mbeethub-environment-beet-k8s-1-59l8q-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Showing logs for build [32mbeethub-environment-beet-k8s-1-787g2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
 Modified file /workspace/source/env/Chart.yaml to set the chart to version 1
 Namespace **-staging created 
 Ignoring templates/.gitignore
@@ -33,4 +33,14 @@ Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
 Successfully added Helm repository chartmuseum.jenkins-x.io.
-
+error: failed to build the dependencies of chart '/tmp/**-helm-apply-959565563/env': failed to run 'helm dependency build' command in directory '/tmp/**-helm-apply-959565563/env', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "chartmuseum.jenkins-x.io" chart repository
+...Successfully got an update from the "storage.googleapis.com" chart repository
+Update Complete.
+Error: receipt-api chart not found in repo http://jenkins-x-chartmuseum:8080'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m
