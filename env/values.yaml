@@ -13,10 +13,10 @@ expose:
   - --v
   - 4
   config:
-    domain: beethub.com.mx
+    domain: trn.beethub.com.mx
     exposer: Ingress
     http: "false"
-    tlsSecretName: tls-beethub-com-mx-p
+    tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
