@@ -24,3 +24,9 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
+keycloak-db:
+  existingSecret: keycloak-db
+  mysqlUser: keycloak
+  mysqlDatabase: keycloak
+  persistence:
+    storageClass: do-block-storage
