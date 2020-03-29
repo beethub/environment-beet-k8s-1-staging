@@ -38,7 +38,7 @@ keycloak-s:
       deployPostgres: false
       dbVendor: mysql
       dbName: keycloak
-      dbHost: keycloak-db
+      dbHost: jx-keycloak-db
       dbPort: 3306
       existingSecret: keycloak-db
       existingSecretPasswordKey: mysql-password
