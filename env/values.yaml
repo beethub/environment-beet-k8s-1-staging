@@ -31,26 +31,27 @@ keycloak-db:
   persistence:
     storageClass: do-block-storage
 keycloak-s:
-  existingSecret: keycloak
-  existingSecretKey: password
-  persistence:
-    deployPostgres: false
-    dbVendor: mysql
-    dbName: keycloak
-    dbHost: keycloak-db
-    dbPort: 3306
-    existingSecret: keycloak-db
-    existingSecretPasswordKey: mysql-password
-    existingSecretUsernameKey: mysql-user
-  ingress:
-    enabled: true
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      kubernetes.io/tls-acme: "true"
-    path: /
-    hosts: 
-    - keycloak.trn.beethub.com.mx
-    tls: 
-    - hosts: 
+  keycloak:
+    existingSecret: keycloak
+    existingSecretKey: password
+    persistence:
+      deployPostgres: false
+      dbVendor: mysql
+      dbName: keycloak
+      dbHost: keycloak-db
+      dbPort: 3306
+      existingSecret: keycloak-db
+      existingSecretPasswordKey: mysql-password
+      existingSecretUsernameKey: mysql-user
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        kubernetes.io/tls-acme: "true"
+      path: /
+      hosts: 
       - keycloak.trn.beethub.com.mx
-      secretName: tls-trn-beethub-com-mx-p
+      tls: 
+      - hosts: 
+        - keycloak.trn.beethub.com.mx
+        secretName: tls-trn-beethub-com-mx-p
