@@ -55,3 +55,6 @@ keycloak-s:
       - hosts: 
         - keycloak.trn.beethub.com.mx
         secretName: tls-trn-beethub-com-mx-p
+    extraEnv: |
+      - name: JDBC_PARAMS
+        value: useSSL=false
