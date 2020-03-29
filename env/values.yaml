@@ -31,6 +31,10 @@ keycloak-db:
   persistence:
     storageClass: do-block-storage
 keycloak:
+  service:
+    annotations:
+      fabric8.io/expose: "true"
+      fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
   existingSecret: keycloak
   existingSecretKey: password
   persistence:
