@@ -1,4 +1,7 @@
 dependencies:
+- name: beet
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
 - alias: expose
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
@@ -7,14 +10,14 @@ dependencies:
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
   version: 2.3.118
-- name: receipt-api
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.17
-- alias: keycloak-db
-  name: mysql
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 1.6.2
 - alias: keycloak-s
   name: keycloak
   repository: https://codecentric.github.io/helm-charts
   version: 7.4.0
+- alias: keycloak-db
+  name: mysql
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 1.6.2
+- name: receipt-api
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.17
