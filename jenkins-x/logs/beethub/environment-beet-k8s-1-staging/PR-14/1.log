@@ -1,0 +1,42 @@
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5pjp4[0m
+{"level":"warn","ts":1585852000.8216426,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585852000.822998,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ddstc[0m
+{"level":"warn","ts":1585852001.7366874,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585852001.7422137,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-m24gs-vxhvr[0m
+{"level":"warn","ts":1585852005.8320503,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585852006.169475,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6,14:76605b3fdfaafd01bf2820a9aae601a352858dab
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 76605b3fdfaafd01bf2820a9aae601a352858dab: a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6:
+DEBUG: ran git fetch --unshallow origin 76605b3fdfaafd01bf2820a9aae601a352858dab: a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6
+DEBUG: ran git reset --hard a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 76605b3fdfaafd01bf2820a9aae601a352858dab
+DEBUG: ran git merge 76605b3fdfaafd01bf2820a9aae601a352858dab in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e a54109dee4ee1ef4a0639a2ed7007d17ca2ec7a6..HEAD
+Merged SHA 76605b3fdfaafd01bf2820a9aae601a352858dab with commit message 'chore: Promote beet to version 0.0.5' into base branch master
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-m24gs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: codecentric.github.io https://codecentric.github.io/helm-charts
+Successfully added Helm repository codecentric.github.io.
