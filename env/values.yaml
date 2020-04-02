@@ -18,43 +18,43 @@ expose:
     http: "false"
     tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
-    urltemplate: '{{.Service}}.{{.Domain}}'
+    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
 jenkins:
   Servers:
     Global: {}
-prow: {}
 keycloak-db:
   existingSecret: keycloak-db
-  mysqlUser: keycloak
   mysqlDatabase: keycloak
+  mysqlUser: keycloak
   persistence:
     storageClass: do-block-storage
 keycloak-s:
   keycloak:
     existingSecret: keycloak
     existingSecretKey: password
-    persistence:
-      deployPostgres: false
-      dbVendor: mysql
-      dbName: keycloak
-      dbHost: jx-keycloak-db
-      dbPort: 3306
-      existingSecret: keycloak-db
-      existingSecretPasswordKey: mysql-password
-      existingSecretUsernameKey: mysql-user
-    ingress:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: nginx
-        kubernetes.io/tls-acme: "true"
-      path: /
-      hosts: 
-      - keycloak.trn.beethub.com.mx
-      tls: 
-      - hosts: 
-        - keycloak.trn.beethub.com.mx
-        secretName: tls-trn-beethub-com-mx-p
     extraEnv: |
       - name: JDBC_PARAMS
         value: useSSL=false
+    ingress:
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        kubernetes.io/tls-acme: "true"
+      enabled: true
+      hosts:
+      - keycloak.trn.beethub.com.mx
+      path: /
+      tls:
+      - hosts:
+        - keycloak.trn.beethub.com.mx
+        secretName: tls-trn-beethub-com-mx-p
+    persistence:
+      dbHost: jx-keycloak-db
+      dbName: keycloak
+      dbPort: 3306
+      dbVendor: mysql
+      deployPostgres: false
+      existingSecret: keycloak-db
+      existingSecretPasswordKey: mysql-password
+      existingSecretUsernameKey: mysql-user
+prow: {}
