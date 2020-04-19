@@ -63,4 +63,9 @@ beet:
     KEYCLOAK_REALM: beet-staging
     KEYCLOAK_CLIENT_ID: beet
     BACKEND_URL: https://api.trn.beethub.com.mx/graphql
+api:
+  env:
+    CLIENT_ID: "api-beet"
+    SERVER_URL: "https://keycloak.trn.beethub.com.mx/auth/"
+    REALM: "beet-staging"
 prow: {}
