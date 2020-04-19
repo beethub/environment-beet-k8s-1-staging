@@ -59,8 +59,8 @@ keycloak-s:
       existingSecretUsernameKey: mysql-user
 beet:
   env:
-  KEYCLOAK_URL: https://keycloak.trn.beethub.com.mx/auth/
-  KEYCLOAK_REALM: beet-staging
-  KEYCLOAK_CLIENT_ID: beet
-  BACKEND_URL: https://api.trn.beethub.com.mx/graphql
+    KEYCLOAK_URL: https://keycloak.trn.beethub.com.mx/auth/
+    KEYCLOAK_REALM: beet-staging
+    KEYCLOAK_CLIENT_ID: beet
+    BACKEND_URL: https://api.trn.beethub.com.mx/graphql
 prow: {}
