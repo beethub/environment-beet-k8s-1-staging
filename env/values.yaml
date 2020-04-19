@@ -1,4 +1,15 @@
 PipelineSecrets: {}
+api:
+  env:
+    CLIENT_ID: api-beet
+    REALM: beet-staging
+    SERVER_URL: https://keycloak.trn.beethub.com.mx/auth/
+beet:
+  env:
+    BACKEND_URL: https://api.trn.beethub.com.mx/graphql
+    KEYCLOAK_CLIENT_ID: beet
+    KEYCLOAK_REALM: beet-staging
+    KEYCLOAK_URL: https://keycloak.trn.beethub.com.mx/auth/
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
@@ -18,7 +29,7 @@ expose:
     http: "false"
     tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
-    urltemplate: '{{.Service}}.{{.Domain}}'
+    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
 jenkins:
   Servers:
@@ -57,15 +68,4 @@ keycloak-s:
       existingSecret: keycloak-db
       existingSecretPasswordKey: mysql-password
       existingSecretUsernameKey: mysql-user
-beet:
-  env:
-    KEYCLOAK_URL: https://keycloak.trn.beethub.com.mx/auth/
-    KEYCLOAK_REALM: beet-staging
-    KEYCLOAK_CLIENT_ID: beet
-    BACKEND_URL: https://api.trn.beethub.com.mx/graphql
-api:
-  env:
-    CLIENT_ID: "api-beet"
-    SERVER_URL: "https://keycloak.trn.beethub.com.mx/auth/"
-    REALM: "beet-staging"
 prow: {}
