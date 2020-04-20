@@ -3,7 +3,7 @@ api:
   env:
     CLIENT_ID: api-beet
     REALM: beet-staging
-    SERVER_URL: http://jx-keycloak-s-http/auth/
+    SERVER_URL: https://keycloak.trn.beethub.com.mx/auth/
 beet:
   env:
     BACKEND_URL: https://api.trn.beethub.com.mx/graphql
