@@ -29,8 +29,11 @@ expose:
     http: "false"
     tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
-    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+    urltemplate: '{{.Service}}.{{.Domain}}'
   production: true
+file:
+  env:
+    NODE_ENV: STAGING
 jenkins:
   Servers:
     Global: {}
