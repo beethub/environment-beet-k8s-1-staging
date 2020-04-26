@@ -1,0 +1,38 @@
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-f44xl[0m
+{"level":"warn","ts":1587935815.91391,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587935815.9142041,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-qmzkk[0m
+{"level":"warn","ts":1587935816.3125732,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587935816.317902,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-6p5jv-d2gl8[0m
+{"level":"warn","ts":1587935820.4612544,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587935820.9624417,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ v0.0.59 in path /workspace/source"}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:674c2144303e5f0006b621077dd80aed4afa7931
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6p5jv-50[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 50
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: codecentric.github.io https://codecentric.github.io/helm-charts
+Successfully added Helm repository codecentric.github.io.
+
+release.jenkins.io "beet-0.0.12" deleted
