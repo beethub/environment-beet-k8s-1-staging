@@ -1,0 +1,41 @@
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-l2xct[0m
+{"level":"warn","ts":1587924567.6685479,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587924567.6693573,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-w88bm[0m
+{"level":"warn","ts":1587924568.5129907,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587924568.514455,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-6zsdh-brmpg[0m
+{"level":"warn","ts":1587924572.6052294,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587924572.8630862,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:50a115c79b0f62933f35584a9542428feff26ce0,33:b771b4735e78215203769c7c197d917bef1bb794
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow b771b4735e78215203769c7c197d917bef1bb794: 50a115c79b0f62933f35584a9542428feff26ce0:
+DEBUG: ran git fetch --unshallow origin b771b4735e78215203769c7c197d917bef1bb794: 50a115c79b0f62933f35584a9542428feff26ce0: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 50a115c79b0f62933f35584a9542428feff26ce0
+DEBUG: ran git reset --hard 50a115c79b0f62933f35584a9542428feff26ce0 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b771b4735e78215203769c7c197d917bef1bb794
+DEBUG: ran git merge b771b4735e78215203769c7c197d917bef1bb794 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 50a115c79b0f62933f35584a9542428feff26ce0..HEAD
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-6zsdh-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: codecentric.github.io https://codecentric.github.io/helm-charts
+Successfully added Helm repository codecentric.github.io.
