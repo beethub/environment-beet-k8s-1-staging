@@ -1,0 +1,57 @@
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rtdk8[0m
+{"level":"warn","ts":1589403672.2159052,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403672.2161849,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-4vzch[0m
+{"level":"warn","ts":1589403672.9329429,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589403672.9342494,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beethub-environment-beet-k8s-1-kpxmh-7spqj[0m
+{"level":"warn","ts":1589403678.0404992,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403678.4141529,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/beethub/environment-beet-k8s-1-staging.git @ v0.0.67 in path /workspace/source"}
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9578de6f1a099dd630ef565e421715e6a29536e6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mbeethub-environment-beet-k8s-1-kpxmh-58[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 58
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: codecentric.github.io https://codecentric.github.io/helm-charts
+Successfully added Helm repository codecentric.github.io.
+error: failed to build the dependencies of chart '/tmp/**-helm-apply-788950166/env': failed to run 'helm dependency build' command in directory '/tmp/**-helm-apply-788950166/env', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository
+...Successfully got an update from the "codecentric.github.io" chart repository
+...Successfully got an update from the "chartmuseum.jenkins-x.io" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "storage.googleapis.com" chart repository
+Update Complete.
+Saving 8 charts
+Downloading api from repo http://jenkins-x-chartmuseum:8080
+Downloading beet from repo http://jenkins-x-chartmuseum:8080
+Downloading exposecontroller from repo http://chartmuseum.jenkins-x.io
+Downloading exposecontroller from repo http://chartmuseum.jenkins-x.io
+Downloading file from repo http://jenkins-x-chartmuseum:8080
+Downloading keycloak from repo https://codecentric.github.io/helm-charts
+Save error occurred:  could not download https://github.com/codecentric/helm-charts/releases/download/keycloak-7.4.0/keycloak-7.4.0.tgz: Get https://github-production-release-asset-2e65be.s3.amazonaws.com/167935045/8fc50700-6b88-11ea-824c-5a21d3f6a676?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200513T210210Z&X-Amz-Expires=300&X-Amz-Signature=93e2d3af40c2544f9ab2babfe1cdeef43c1159c68e90d5c28f3d618cf9930604&X-Amz-SignedHeaders=host&actor_id=0&repo_id=167935045&response-content-disposition=attachment%3B%20filename%3Dkeycloak-7.4.0.tgz&response-content-type=application%2Foctet-stream: dial tcp: lookup github-production-release-asset-2e65be.s3.amazonaws.com on 10.245.0.10:53: server misbehaving
+Deleting newly downloaded charts, restoring pre-update state
+Error: could not download https://github.com/codecentric/helm-charts/releases/download/keycloak-7.4.0/keycloak-7.4.0.tgz: Get https://github-production-release-asset-2e65be.s3.amazonaws.com/167935045/8fc50700-6b88-11ea-824c-5a21d3f6a676?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200513T210210Z&X-Amz-Expires=300&X-Amz-Signature=93e2d3af40c2544f9ab2babfe1cdeef43c1159c68e90d5c28f3d618cf9930604&X-Amz-SignedHeaders=host&actor_id=0&repo_id=167935045&response-content-disposition=attachment%3B%20filename%3Dkeycloak-7.4.0.tgz&response-content-type=application%2Foctet-stream: dial tcp: lookup github-production-release-asset-2e65be.s3.amazonaws.com on 10.245.0.10:53: server misbehaving'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m
