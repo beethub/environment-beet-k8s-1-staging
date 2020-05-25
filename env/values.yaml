@@ -2,10 +2,9 @@ PipelineSecrets: {}
 api:
   env:
     CLIENT_ID: api-beet
+    NODE_ENV: staging
     REALM: beet-staging
     SERVER_URL: https://keycloak.trn.beethub.com.mx/auth/
-    NODE_ENV: staging
-    
 beet:
   env:
     BACKEND_URL: https://api.trn.beethub.com.mx/graphql
@@ -31,7 +30,7 @@ expose:
     http: "false"
     tlsSecretName: tls-trn-beethub-com-mx-p
     tlsacme: "true"
-    urltemplate: '{{.Service}}.{{.Domain}}'
+    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
 file:
   env:
